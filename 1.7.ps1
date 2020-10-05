@@ -1,0 +1,23 @@
+# Mandatory parameters may include help. Aliases can be defined for any parameter
+
+Function Test-Net {
+    [CmdletBinding()]
+    Param(
+        [Parameter(Mandatory=$true,Help="Enter the name of a computer to check connectivity to")]
+        [Alias("serverName","hostName")]
+        [string[]]$computerName,
+
+        [int]$port = 135
+    )
+    ForEach ($computer in $computerName){
+        Write-Verbose "Now testing $computer"
+        $pingResult = Test-NetConnection -ComputerName $computer -InformationLevel Quiet -WarningAction SilentlyContinue
+        If($pingResult){
+            Write-Output $pingResult
+        }Else{
+            Write-Verbose "Ping failed. Checking port..."
+            $portResult = Test-NetConnection -ComputerName $computer -InformationLevel Quiet -WarningAction SilentlyContinue -Port $port
+            Write-Output $portResult
+        }
+    }
+}
