@@ -1,4 +1,4 @@
-
+# Add verbose messages with Write-Verbose
 
 Function Test-Net {
     [CmdletBinding()]
@@ -13,10 +13,11 @@ Function Test-Net {
         If($pingResult){
             Write-Output $pingResult
         }Else{
+            Write-Verbose "Ping failed. Checking port..."
             $portResult = Test-NetConnection -ComputerName $computer -InformationLevel Quiet -WarningAction SilentlyContinue -Port $port
             Write-Output $portResult
         }
     }
 }
 
-Test-Net LON-DC1,LON-SVR1 # call the function to execute it
+Test-Net LON-DC1,LON-SVR1 -Verbose # call the function with the -Verbose parameter
