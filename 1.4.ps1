@@ -8,6 +8,7 @@ Function Test-Net {
         [int]$port = 135
     )
     ForEach ($computer in $computerName){
+        Write-Verbose "Now testing $computer"
         $pingResult = Test-NetConnection -ComputerName $computer -InformationLevel Quiet -WarningAction SilentlyContinue
         If($pingResult){
             Write-Output $pingResult
