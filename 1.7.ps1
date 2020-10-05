@@ -1,9 +1,9 @@
-# Mandatory parameters may include help. Aliases can be defined for any parameter
+# Mandatory parameters may include a help message. Aliases can be defined for any parameter
 
 Function Test-Net {
     [CmdletBinding()]
     Param(
-        [Parameter(Mandatory=$true,Help="Enter the name of a computer to check connectivity to")]
+        [Parameter(Mandatory=$true,HelpMessage="Enter the name of a computer to check connectivity to")]
         [Alias("serverName","hostName")]
         [string[]]$computerName,
 
