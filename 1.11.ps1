@@ -24,6 +24,8 @@ Function Test-Net {
     If($PSBoundParameters.ContainsKey('IP')){
         $computerList = $IP # we also need to store the list in a variable other than $computerName now because
                             # the $computerName variable is restricted to our naming pattern
+    }Else{
+        $computerList = $computerName
     }
     ForEach ($computer in $computerList){
         Write-Verbose "Now testing $computer"
