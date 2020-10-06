@@ -1,3 +1,5 @@
+# 1.2
+
 # The $args automatic variable can be used as a kind of "un-named" parameter to accept input to our code
 # Using a ForEach enumeration for the $args collection has the added benefit of allowing us to test
 # connectivity to more than one system using Test-NetConnection

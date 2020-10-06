@@ -1,3 +1,5 @@
+# 1.3
+
 # Functions are a way of writing your own PowerShell commands using PowerShell's language
 
 # Advanced functions use the CmdletBinding attribute to identify them as functions that act similar to cmdlets

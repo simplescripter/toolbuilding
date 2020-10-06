@@ -1,4 +1,4 @@
-# 1.10
+# 1.12
 
 Function Test-Net {
     [CmdletBinding(DefaultParameterSetName="Computer")]
@@ -6,23 +6,29 @@ Function Test-Net {
         [Parameter(Mandatory=$true,HelpMessage="Enter the name of a computer to check connectivity to",
         ParameterSetName="Computer")]
         [Alias("serverName","hostName")]
-        [ValidateCount(1,64)]   # maybe we want to limit the number of computers in a single scan
-        [ValidateLength(1,15)]  # and we don't want computer names longer than 15 characters
+        [ValidateCount(1,64)]   
+        [ValidateLength(1,15)]
+        [ValidatePattern("LON[a-z]{2,3}\d{1,2}")]  # only allow computer names that match our environment
         [string[]]$computerName,
-
+       
         [Parameter(Mandatory=$true,HelpMessage="Enter the IP of a computer to check connectivity to",
         ParameterSetName="IP")]
+        [ValidatePattern("^((25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")] # or valid IPs
         [string[]]$IP,  
                         
 
+        [ValidateSet(135,80,22,445)] # ValidateSet allows us to hard-code a list of possible values
         [int]$port = 135
     )
     
 
     If($PSBoundParameters.ContainsKey('IP')){
-        $computerName = $IP 
+        $computerList = $IP # we also need to store the list in a variable other than $computerName now because
+                            # the $computerName variable is restricted to our naming pattern
+    }Else{
+        $computerList = $computerName
     }
-    ForEach ($computer in $computerName){
+    ForEach ($computer in $computerList){
         Write-Verbose "Now testing $computer"
         $pingResult = Test-NetConnection -ComputerName $computer -InformationLevel Quiet -WarningAction SilentlyContinue
         If($pingResult){

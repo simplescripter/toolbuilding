@@ -1,4 +1,6 @@
-# start with a one-liner using fixed values
+# 1.1 
+
+#Start with a one-liner using fixed values
 
 Test-NetConnection -ComputerName LON-SVR1 -InformationLevel Quiet -WarningAction SilentlyContinue
 
