@@ -1,10 +1,11 @@
 ﻿# 1.17 Publishing modules internally
 
 Invoke-Command LonSvr1 {
-    New-Item -Name C:\PSRepo -ItemType Directory
+    New-Item C:\PSRepo -ItemType Directory
     New-SmbShare -Path C:\PSRepo -Name PSRepo -FullAccess Everyone
 }
 $networkShare = "\\LonSvr1\PSRepo"
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
 $repo = @{
     Name = 'MyRepo'
     SourceLocation = $networkShare
@@ -12,9 +13,11 @@ $repo = @{
     InstallationPolicy = 'Trusted'
 }
 Register-PSRepository @repo
-Find-Module -Repository 'MyRepo'
+
 $publishModuleSplat = @{
-Repository = 'MyRepository'
-Path = '.\MyModule'
+    Repository = 'MyRepository'
+    Path = '.\MyModule'
 }
 Publish-Module @publishModuleSplat
+
+Find-Module -Repository 'MyRepo'
