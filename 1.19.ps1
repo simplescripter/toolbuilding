@@ -16,19 +16,18 @@ Function Test-Net {
        
         [Parameter(Mandatory=$true,HelpMessage="Enter the IP of a computer to check connectivity to",
         ParameterSetName="IP")]
-        [ValidatePattern("^((25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")] # or valid IPs
+        [ValidatePattern("^((25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")]
         [string[]]$IP,  
                         
 
-        [ValidateSet(135,80,22,445)] # ValidateSet allows us to hard-code a list of possible values
+        [ValidateSet(135,80,22,445)]
         [int]$port = 135
     )
     
     BEGIN {}
     PROCESS {
         If($PSBoundParameters.ContainsKey('IP')){
-            $computerList = $IP # we also need to store the list in a variable other than $computerName now because
-                                # the $computerName variable is restricted to our naming pattern
+            $computerList = $IP 
         }Else{
             $computerList = $computerName
         }
