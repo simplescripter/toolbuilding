@@ -2,8 +2,8 @@
 
 $params = @{
     TypeName = 'Microsoft.ActiveDirectory.Management.ADComputer'
-    MemberType = ScriptProperty
-    MemberName = ComputerName
+    MemberType = 'ScriptProperty'
+    MemberName = 'ComputerName'
     Value = "{$this.Name}"
 }
 
