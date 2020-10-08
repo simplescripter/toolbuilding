@@ -1,4 +1,10 @@
 ﻿# 2.3  Constructors, Overloads, and Enumerations
 
-[System.ConsoleColor].GetMembers() | Select Name
 [System.Collections.Arraylist]$collection = <list>
+$array = New-Object System.Collections.Arraylist
+
+			#	-or-
+				
+$array = [System.Collections.ArrayList]::New
+
+[System.ConsoleColor].GetMembers() | Select Name
