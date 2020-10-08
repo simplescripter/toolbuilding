@@ -1,6 +1,6 @@
-# 1.1 
+# 1.1  Moving from One-Liners to Scripts to Functions
 
-#Start with a one-liner using fixed values
+# Start with a one-liner using fixed values
 
 Test-NetConnection -ComputerName LON-SVR1 -InformationLevel Quiet -WarningAction SilentlyContinue
 

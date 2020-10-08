@@ -1,4 +1,4 @@
-# 1.12
+# 1.12 Parameter Validation Attributes: ValidateSet and "enum"
 
 Function Test-Net {
     [CmdletBinding(DefaultParameterSetName="Computer")]

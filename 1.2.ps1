@@ -1,4 +1,4 @@
-# 1.2
+# 1.2 Why Parameterize My Code?
 
 # The $args automatic variable can be used as a kind of "un-named" parameter to accept input to our code
 # Using a ForEach enumeration for the $args collection has the added benefit of allowing us to test

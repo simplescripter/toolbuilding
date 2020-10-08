@@ -1,4 +1,4 @@
-# 1.3
+# 1.3 Types of PowerShell Functions
 
 # Functions are a way of writing your own PowerShell commands using PowerShell's language
 

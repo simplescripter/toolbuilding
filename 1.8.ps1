@@ -1,4 +1,4 @@
-# 1.8
+# 1.8 Parameter Attributes: ParameterSetName and Position
 
 # Parameter sets are mutually exclusive
 

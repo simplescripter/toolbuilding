@@ -1,4 +1,4 @@
-# 1.4
+# 1.4 Adding Verbose Output
 
 # Add verbose messages with Write-Verbose
 

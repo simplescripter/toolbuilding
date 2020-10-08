@@ -1,4 +1,4 @@
-# 1.12
+# 1.12 Dynamic Parameter Example
 
 Function Test-Net {
     [CmdletBinding(DefaultParameterSetName="Computer")]

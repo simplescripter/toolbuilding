@@ -1,4 +1,4 @@
-﻿# 1.17 Publishing modules internally
+﻿# 1.17 Publishing Modules Internally
 
 Invoke-Command LonSvr1 {
     New-Item C:\PSRepo -ItemType Directory

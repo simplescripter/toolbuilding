@@ -1,4 +1,4 @@
-# 1.15 Script Modules
+# 1.15 Packaging Functions into a Script Module
 
 # Save this file to Documents\WindowsPowerShell\Modules\PSLib as PSLib.psm1
 

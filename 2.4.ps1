@@ -1,4 +1,4 @@
-# 2.4
+# 2.4 Add-Type and Update-TypeData
 
 $params = @{
     TypeName = 'Microsoft.ActiveDirectory.Management.ADComputer'

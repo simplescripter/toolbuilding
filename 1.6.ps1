@@ -1,4 +1,4 @@
-# 1.6
+# 1.6 Parameter Attributes: Default vs Mandatory
 
 # Can declare a mandatory parameter with [Parameter(Mandatory=$true)]
 
