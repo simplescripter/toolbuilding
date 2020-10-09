@@ -1,4 +1,4 @@
-﻿# 3.3 Invoke-RestMethod
+# 3.3 Invoke-RestMethod
 
 # Demo 1
 
