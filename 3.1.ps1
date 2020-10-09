@@ -1,4 +1,4 @@
-﻿# 3.1 The Problem with Processing HTML
+# 3.1 The Problem with Processing HTML
 
 Function Get-Quote {
     Param(
