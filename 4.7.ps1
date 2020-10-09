@@ -1,4 +1,4 @@
-﻿# 4.7 ConvertTo-HTML Fragments for Multi-section Reports
+# 4.7 ConvertTo-HTML Fragments for Multi-section Reports
 
 #requires -module PSLib
 
