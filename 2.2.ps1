@@ -1,4 +1,4 @@
-﻿# 2.2 Using Static Members
+# 2.2 Using Static Members
 
 $pi = [Math]::PI
 [Math]::Round($pi,4)
