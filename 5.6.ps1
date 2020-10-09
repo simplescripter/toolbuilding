@@ -1,4 +1,4 @@
-﻿# 5.6 Finally { }
+# 5.6 Finally { }
 
 Try{
     Get-Service NONE -ErrorAction Stop
