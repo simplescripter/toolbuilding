@@ -30,8 +30,13 @@ $style = @"
 }
 Process {
     ForEach ($computer in $computerName){
-        If(-not (Test-Net -computerName $computer)){
-            $result = "$computer is OFFLINE"
+        If(-not (Test-Net -computerName $computer).Reachable){
+            # ConvertTo-Html only converts objects, so we'll create one:
+            $properties = @{
+                computer = $computerName
+                status = 'OFFLINE'
+            }
+            $result = New-Object -TypeName psobject -Property $properties
         }Else{
             $result = Get-Service -ComputerName $computerName | Select-Object ServiceName,DisplayName,StartType,Status
         }
