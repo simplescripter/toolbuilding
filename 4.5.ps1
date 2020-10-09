@@ -1,4 +1,4 @@
-﻿# 4.5 Introduction to PowerShell GUIs
+# 4.5 Introduction to PowerShell GUIs
 
 Function Get-Calendar {  
 
