@@ -1,4 +1,4 @@
-﻿# 4.3 Read-Host, Write-Host, and Write-Progress
+# 4.3 Read-Host, Write-Host, and Write-Progress
 
 
 
