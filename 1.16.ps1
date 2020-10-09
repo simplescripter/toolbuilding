@@ -1,4 +1,4 @@
-﻿# 1.16 Module manifests
+# 1.16 Module manifests
  
 $params = @{
     Path = 'C:\Users\Administrator.ADATUM\Documents\WindowsPowerShell\Modules\PSLib\PSLib.psd1'
