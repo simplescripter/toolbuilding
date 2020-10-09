@@ -1,4 +1,4 @@
-﻿# 2.3  Constructors, Overloads, and Enumerations
+# 2.3  Constructors, Overloads, and Enumerations
 
 # Arraylist example
 
