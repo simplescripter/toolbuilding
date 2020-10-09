@@ -33,7 +33,7 @@ Process {
         If(-not (Test-Net -computerName $computer).Reachable){
             # ConvertTo-Html only converts objects, so we'll create one:
             $properties = @{
-                computer = $computerName
+                computer = $computer
                 status = 'OFFLINE'
             }
             $result = New-Object -TypeName psobject -Property $properties
