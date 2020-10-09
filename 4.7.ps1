@@ -47,7 +47,7 @@ Process {
                  Select-Object -Property Manufacturer,Version,SMBIOSBIOSVersion,SerialNumber |
                  ConvertTo-HTML -Fragment -As List -PreContent "<h2>BIOS Info</h2>" |
                  Out-String
-            $services = Get-Service -ComputerName $computerName | Select-Object ServiceName,DisplayName,StartType,Status |
+            $services = Get-Service -ComputerName $computer | Select-Object ServiceName,DisplayName,StartType,Status |
                  ConvertTo-HTML -Fragment -As Table -PreContent "<h2>Services</h2>" |
                  Out-String
 
