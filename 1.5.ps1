@@ -15,11 +15,11 @@ Function Test-Net {
         If($pingResult){
             Write-Output $pingResult
         }Else{
-            Write-Verbose "Ping failed. Checking port..."
+            Write-Verbose "Ping failed on $computer. Checking port $port..."
             $portResult = Test-NetConnection -ComputerName $computer -InformationLevel Quiet -WarningAction SilentlyContinue -Port $port
             Write-Output $portResult
         }
     }
 }
 
-Test-Net LON-DC1,LON-SVR1
+Test-Net LonDC1,LonSVR1
