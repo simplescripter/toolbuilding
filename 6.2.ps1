@@ -1,5 +1,7 @@
 ﻿# 6.2 Breakpoints in the console
 
+# Run C:\Users\Shawn.ADATUM\Documents\GitHub\toolbuilding\6.2.ps1 from a console
+
 Function Write-ToLog {
     Param (
         [string]$logPath = 'D:\scratchspace\log.csv', # We've parameterized $logPath
