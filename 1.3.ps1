@@ -17,4 +17,4 @@ Function Test-Net {
     }
 }
 
-Test-Net LON-DC1 LON-SVR1 # call the function to execute it
+Test-Net LonDC1 LonSVR1 # call the function to execute it
