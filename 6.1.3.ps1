@@ -1,4 +1,4 @@
-﻿# 5.8.3 Write-Debug Continued: Fixed
+﻿# 6.1.3 Write-Debug Continued: Fixed
 
 Function Write-ToLog {
     Param (

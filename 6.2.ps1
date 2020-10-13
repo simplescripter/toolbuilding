@@ -1,17 +1,16 @@
-﻿# 6.1.2 Write-Debug Continued
+﻿# 5.8.1 Write-Debug
 
 Function Write-ToLog {
     Param (
-        [string]$logPath = 'D:\scratchspace\log.csv',
+        [string]$logPath = 'D:\scratchspace\log.csv', # We've parameterized $logPath
 
-        [string]$logData        
+        [string]$logData
     )
 
     $properties = @{
         Date = (Get-Date)
         Data = $logData
     }
-    Write-Debug "Attempting to write to log" # this is new
     New-Object -TypeName psobject -Property $properties | Export-Csv -NoTypeInformation -Append -Path $logPath 
 }
 
@@ -29,7 +28,6 @@ Function Get-OSReleaseID {
         $releaseID = "ReleaseId"
         $productName = "ProductName"
         ForEach($computer in $computerName){
-            Write-Debug "Attempting to connect to $computer" # this is new
             $ok = $true
             Try{
                 $wmi = [wmiclass]"\\$computer\root\default:stdRegProv"
@@ -71,4 +69,4 @@ Function Get-OSReleaseID {
     }
 }
 
-Get-OSReleaseID -computerName LonSVR1,LonDC1 -logIt -Debug # run with the -Debug common parameter
+Get-OSReleaseID -computerName LonSVR1,LonDC1 -logIt # the errors don't get logged as we expect
