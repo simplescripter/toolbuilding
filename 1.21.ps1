@@ -37,7 +37,7 @@ Function Test-Net {
             If($pingResult){
                 $result = $pingResult      
             }Else{
-                Write-Verbose "Ping failed. Checking port..."
+                Write-Verbose "Ping failed on $computer. Checking port $port..."
                 $portResult = Test-NetConnection -ComputerName $computer -InformationLevel Quiet -WarningAction SilentlyContinue -Port $port
                 $result = $portResult
             }
