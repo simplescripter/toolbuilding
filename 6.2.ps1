@@ -1,4 +1,4 @@
-﻿# 5.8.1 Write-Debug
+﻿# 6.2 Breakpoints in the console
 
 Function Write-ToLog {
     Param (
@@ -69,4 +69,5 @@ Function Get-OSReleaseID {
     }
 }
 
-Get-OSReleaseID -computerName LonSVR1,LonDC1 -logIt # the errors don't get logged as we expect
+Set-PSBreakpoint -Line 10 -Script "C:\Users\Shawn.ADATUM\Documents\GitHub\toolbuilding\6.2.ps1"
+Get-OSReleaseID -computerName LonSVR1,LonDC1 -logIt
