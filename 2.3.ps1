@@ -14,7 +14,7 @@ Do {
 }Until($computerList.Count -eq 0)
 Write-Host 'All systems in $computerList have been contacted.' -ForegroundColor DarkCyan -BackgroundColor Yellow
 
-# can also use $array = New-Object System.Collections.Arraylist or $array = [System.Collections.ArrayList]::New
+# can also use $array = New-Object System.Collections.Arraylist or $array = [System.Collections.ArrayList]::New()
 
 # enumerations examples
 
