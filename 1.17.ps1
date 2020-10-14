@@ -15,8 +15,8 @@ $repo = @{
 Register-PSRepository @repo
 
 $publishModuleSplat = @{
-    Repository = 'MyRepository'
-    Path = '.\MyModule'
+    Repository = 'MyRepo'
+    Path = 'C:\Users\Shawn.ADATUM\Documents\WindowsPowerShell\Modules\PSLib'
 }
 Publish-Module @publishModuleSplat
 
