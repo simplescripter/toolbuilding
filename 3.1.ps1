@@ -7,11 +7,7 @@ Function Get-Quote {
         [int]$numberOfQuotes = 4
     )
     
-    #$today = (Get-Date).GetDateTimeFormats()[8] # Get current date in "Month Day, Year" format
     $page = Invoke-WebRequest $uri
-    
-    #As an alternative to the following approach, consider using multi-line regex mode modifier as seen here:
-    # https://www.apharmony.com/software-sagacity/2014/08/multi-line-regular-expression-replace-in-powershell/
     $anchorString = 'Michael Moncur'
     $quote = $page.Content.Split("`n") | Select-String $anchorString -Context 0,7
     $quote = $quote -replace '> <div.*</div>',''
