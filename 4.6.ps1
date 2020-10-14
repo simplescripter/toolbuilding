@@ -10,10 +10,10 @@ Param(
     [string]$reportDir = 'C:\Reports'
 )
 Begin{
-If(-not (Test-Path $reportDir)){
-    New-Item -Path $reportDir -ItemType Directory
-}
-$style = @"
+    If(-not (Test-Path $reportDir)){
+        New-Item -Path $reportDir -ItemType Directory
+    }
+    $style = @"
     <style>
     body {
         font-family:Segoe,Tahoma,Arial,Helvetica;
