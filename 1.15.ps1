@@ -10,7 +10,7 @@ Function Test-Net {
         [Alias("serverName","hostName")]
         [ValidateCount(1,64)]   
         [ValidateLength(1,15)]
-        [ValidatePattern("LON[a-z]{2,3}\d{1,2}")]  # only allow computer names that match our environment
+        [ValidatePattern("^LON[a-z]{2,3}\d{1,2}")]  # only allow computer names that match our environment
         [string[]]$computerName,
        
         [Parameter(Mandatory=$true,HelpMessage="Enter the IP of a computer to check connectivity to",
