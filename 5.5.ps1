@@ -1,6 +1,6 @@
 ﻿# 5.5 Multiple Catch {} Blocks
 
-$operation = 3
+$operation = 1
 
 Try {
     Switch ($operation) {
