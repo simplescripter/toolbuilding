@@ -1,4 +1,4 @@
-﻿[DSCLocalConfigurationManager()]
+[DSCLocalConfigurationManager()]
 configuration PartialConfig
 {
     Node localhost
