@@ -4,7 +4,7 @@
 
 Function Write-ToLog {
     Param (
-        [string]$logPath = 'D:\scratchspace\log.csv', # We've parameterized $logPath
+        [string]$logPath = 'C:\PS\log.csv',
 
         [string]$logData
     )
@@ -71,5 +71,5 @@ Function Get-OSReleaseID {
     }
 }
 
-Set-PSBreakpoint -Line 10 -Script "C:\Users\Shawn.ADATUM\Documents\GitHub\toolbuilding\6.2.ps1"
+Set-PSBreakpoint -Line 12 -Script "C:\Users\Shawn.ADATUM\Documents\GitHub\toolbuilding\6.2.ps1"
 Get-OSReleaseID -computerName LonSVR1,LonDC1 -logIt
