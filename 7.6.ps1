@@ -30,18 +30,18 @@
 "1.2.5" -match "[0-9\.[0-9]\.[0-9]" #TRUE
 
 # You can use specific character types with escape codes
-"richie357@xyz.com" -match "\w+@\w+.\w+" # TRUE
+"richie357@xyz.com" -match "\w+@\w+\.\w+" # TRUE
 "A line with     spaces" -match "\s+" # TRUE
 
 # Multiple and limted number of matches
 "004523412239" -match "\d+" # TRUE: \d+ looks for one or more digits
 "004523412239" -match "\d{16}" # FALSE: Only 12 digits in the string, not a minimum of 16 consecutive digits
-123-45-6789
+
 "004523412239ABCD" -match "\d{16}" # FALSE: 16 characters, but not 16 consecutive digits
 "12-345-6789" -match "\d{2}-\d{3,4}-\d{4}" # TRUE
 "12-34-6789" -match "\d{2}-\d{3,4}-\d{4}" # FALSE
 
 # Use ^ and $ to anchor the pattern to the beginning and/or end of the string
-"My email address is richie@xyz.com" -match "\w+@\w+.\w+$" # TRUE
-"My email address is richie@xyz.com" -match "^\w+@\w+.\w+$" # FALSE the pattern must begin the string and end the string
+"My email address is richie@xyz.com" -match "\w+@\w+\.\w+$" # TRUE
+"My email address is richie@xyz.com" -match "^\w+@\w+\.\w+$" # FALSE the pattern must begin the string and end the string
 "richie@xyz.com" -match "^\w+@\w+.\w+$" # TRUE
