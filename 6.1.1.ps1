@@ -69,4 +69,4 @@ Function Get-OSReleaseID {
     }
 }
 
-Get-OSReleaseID -computerName LonSVR1,LonDC1 -logIt # the errors don't get logged as we expect
+Get-OSReleaseID -computerName LonSVR1,LonDC1 -logIt # the details don't get logged as we expect
