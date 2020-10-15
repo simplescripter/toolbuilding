@@ -1,4 +1,4 @@
-﻿Configuration EnvVarsConfig
+Configuration EnvVarsConfig
 {
     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 
