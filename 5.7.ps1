@@ -5,7 +5,7 @@ Function Write-ToLog {
         [string]$logData
     )
     
-    [string]$logPath = 'D:\scratchspace\log.csv' # for now, we'll add logPath as a variable at the top of the function
+    [string]$logPath = 'C:\PS\log.csv' # for now, we'll add logPath as a variable at the top of the function
 
     $properties = @{
         Date = (Get-Date)
@@ -69,4 +69,4 @@ Function Get-OSReleaseID {
     }
 }
 
-Get-OSReleaseID -computerName LonSvr1,LonDC1 -logIt
+Get-OSReleaseID -computerName LonSvr1,LonDC1,LonSVR2 -logIt
