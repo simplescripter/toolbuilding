@@ -2,7 +2,7 @@
 
 Function Write-ToLog {
     Param (
-        [string]$logPath = 'D:\scratchspace\log.csv',
+        [string]$logPath = 'C:\PS\log.csv',
 
         [string]$logData        
     )
