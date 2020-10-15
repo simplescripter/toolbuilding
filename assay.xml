@@ -1,9 +1,9 @@
 ﻿<computers>
-    <computer name="LonDC1">
-        <sysinfo SerialNumber="00376-40000-00000-AA947" Version="10.0.14393" LastBootUpTime="10/14/2020 5:46:34 PM">Microsoft Windows Server 2016 Datacenter</sysinfo>
-    </computer>
-    <computer name="LonSVR1" />
-    <computer name="LonCL1">
-        <sysinfo SerialNumber="00331-10000-00001-AA125" Version="10.0.19041" LastBootUpTime="10/14/2020 5:53:15 PM">Microsoft Windows 10 Pro</sysinfo>
-    </computer>
+  <computer name="LonDC1">
+    <sysinfo SerialNumber="00376-40000-00000-AA947" Version="10.0.14393" LastBootUpTime="10/14/2020 17:46:34">Microsoft Windows Server 2016 Datacenter</sysinfo>
+  </computer>
+  <computer name="LonSVR1" />
+  <computer name="LonCL1">
+    <sysinfo SerialNumber="00331-10000-00001-AA125" Version="10.0.19041" LastBootUpTime="10/14/2020 17:53:15">Microsoft Windows 10 Pro</sysinfo>
+  </computer>
 </computers>

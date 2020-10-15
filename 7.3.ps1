@@ -17,7 +17,7 @@ Function Update-Assay {
         }
 
         $sysinfo = $xml.CreateElement('element','sysinfo','')
-        $sysinfo.InnerText = $sysinfo.Caption
+        $sysinfo.InnerText = $osInfo.Caption
 
         $serial = $xml.CreateAttribute('SerialNumber')
         $version = $xml.CreateAttribute('Version')
