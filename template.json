@@ -1,0 +1,87 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualMachines_LonCL1_name": {
+            "defaultValue": "LonCL1",
+            "type": "String"
+        },
+        "disks_LonCL1_disk1_6ff5e3e531fc4e018708f06a3e3b04e9_externalid": {
+            "defaultValue": "/subscriptions/cb4c9463-4fdf-470a-ab7b-fb305d9f3f34/resourceGroups/INTELLEZY_RG/providers/Microsoft.Compute/disks/LonCL1_disk1_6ff5e3e531fc4e018708f06a3e3b04e9",
+            "type": "String"
+        },
+        "networkInterfaces_loncl1998_externalid": {
+            "defaultValue": "/subscriptions/cb4c9463-4fdf-470a-ab7b-fb305d9f3f34/resourceGroups/Intellezy_RG/providers/Microsoft.Network/networkInterfaces/loncl1998",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2019-07-01",
+            "name": "[parameters('virtualMachines_LonCL1_name')]",
+            "location": "westus2",
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Standard_D2s_v3"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "MicrosoftWindowsDesktop",
+                        "offer": "Windows-10",
+                        "sku": "rs5-pro",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "osType": "Windows",
+                        "name": "[concat(parameters('virtualMachines_LonCL1_name'), '_disk1_6ff5e3e531fc4e018708f06a3e3b04e9')]",
+                        "createOption": "FromImage",
+                        "caching": "ReadWrite",
+                        "managedDisk": {
+                            "storageAccountType": "StandardSSD_LRS",
+                            "id": "[parameters('disks_LonCL1_disk1_6ff5e3e531fc4e018708f06a3e3b04e9_externalid')]"
+                        },
+                        "diskSizeGB": 127
+                    },
+                    "dataDisks": []
+                },
+                "osProfile": {
+                    "computerName": "[parameters('virtualMachines_LonCL1_name')]",
+                    "adminUsername": "Shawn",
+                    "windowsConfiguration": {
+                        "provisionVMAgent": true,
+                        "enableAutomaticUpdates": true
+                    },
+                    "secrets": [],
+                    "allowExtensionOperations": true,
+                    "requireGuestProvisionSignal": true
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[parameters('networkInterfaces_loncl1998_externalid')]"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "apiVersion": "2019-07-01",
+            "name": "[concat(parameters('virtualMachines_LonCL1_name'), '/enablevmaccess')]",
+            "location": "westus2",
+            "dependsOn": [
+                "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_LonCL1_name'))]"
+            ],
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "publisher": "Microsoft.Compute",
+                "type": "VMAccessAgent",
+                "typeHandlerVersion": "2.0",
+                "settings": {},
+                "protectedSettings": {}
+            }
+        }
+    ]
+}
