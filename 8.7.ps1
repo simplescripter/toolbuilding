@@ -1,4 +1,4 @@
-﻿# 8.6 Writing DSC Scripts
+﻿# 8.7 Configuration Data
 
 Configuration FileServerConfig
 {
