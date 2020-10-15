@@ -1,4 +1,4 @@
-﻿# 8.6 Writing DSC Scripts
+﻿# 8.8 Pushing DSC Configurations
 
 Configuration FileServerConfig
 {
@@ -15,3 +15,4 @@ Configuration FileServerConfig
 }
 
 FileServerConfig -OutputPath C:\DscConfigs
+Start-DscConfiguration -Path C:\DscConfigs -Wait -Verbose
