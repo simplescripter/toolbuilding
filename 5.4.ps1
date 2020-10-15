@@ -28,8 +28,8 @@ Try {
 
 ForEach ($computer in $computers) {
     Try {
-        Get-CimInstance -ClassName Win32_OperatingSystem -ComputerName $computers |
-            Select-Object PSComputerName,LastBootupTime -ErrorAction Stop
+        Get-CimInstance -ClassName Win32_OperatingSystem -ComputerName $computer -ErrorAction Stop |
+            Select-Object PSComputerName,LastBootupTime
     } Catch {
         Write-Warning "Trapped error on $computer"
     }
