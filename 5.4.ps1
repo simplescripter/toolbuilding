@@ -6,7 +6,7 @@ $computers = 'LonSVR1','LonSVR99','LonDC1'
 # If the error isn't terminating, the Catch {} block won't run
 
 Try {
-    Get-CimInstance -ClassName Win32_OperatingSystem -ComputerName $computers | Select-Object PSComputerName,LastBootu
+    Get-CimInstance -ClassName Win32_OperatingSystem -ComputerName $computers | Select-Object PSComputerName,LastBootupTime
 } Catch {
     Write-Warning "The command on this line never runs because the error is never trapped"
 }
@@ -17,8 +17,8 @@ Try {
 # In other words, because there's an error in Try {}, none of the computers are queried
 
 Try {
-    Get-CimInstance -ClassName Win32_OperatingSystem -ComputerName $computers |
-        Select-Object PSComputerName,LastBootupTime -ErrorAction Stop
+    Get-CimInstance -ClassName Win32_OperatingSystem -ComputerName $computers -ErrorAction Stop |
+        Select-Object PSComputerName,LastBootupTime
 } Catch {
     Write-Warning "The Catch block runs, but neither of the available computers are queried because the overall command terminates after receiving an error against LonSVR99"
 }
