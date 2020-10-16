@@ -64,4 +64,4 @@ GeneralServerMaintenance -OutputPath C:\DscTest -Verbose -computerName LonSvr1
 
 Start-DscConfiguration -Path C:\DscTest -Wait -Verbose -Force
 
-# Enter-PSSession LonSVR1 -ConfigurationName 'GeneralServerMaintenance' -Credential (Get-Credential)
+# Enter-PSSession LonSVR1 -ConfigurationName GeneralServerMaintenance -Credential $creds
