@@ -1,4 +1,4 @@
-﻿# 10.3.1 Workflows
+# 10.3.1 Workflows
 
 WorkFlow Test-Parallel {
     "First line executes"
