@@ -1,4 +1,4 @@
-﻿# 9.2 JEA Role Capability Files
+# 9.2 JEA Role Capability Files
 
 $demoPath = 'C:\users\Shawn.ADATUM\Documents\GitHub\toolbuilding'
 $roleName = 'General-Lev1.psrc'
