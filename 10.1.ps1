@@ -1,4 +1,4 @@
-﻿# 10.1 Invoke-Command
+# 10.1 Invoke-Command
 
 $computers = 'LonCL1','LonSVR1','LonDC1'
 help Invoke-Command -Parameter ThrottleLimit
