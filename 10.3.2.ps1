@@ -1,4 +1,4 @@
-﻿# 10.3.2 Workflows Continued
+# 10.3.2 Workflows Continued
 
 Workflow PingSweep{
     $computers = @()
