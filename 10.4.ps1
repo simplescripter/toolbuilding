@@ -1,4 +1,4 @@
-﻿# 10.4 PowerShell 7+ ForEach-Object -Parallel
+# 10.4 PowerShell 7+ ForEach-Object -Parallel
 
 #requires -version 7
 
