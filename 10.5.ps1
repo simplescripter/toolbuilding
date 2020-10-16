@@ -1,4 +1,4 @@
-﻿# 10.5 .Net Runspaces
+# 10.5 .Net Runspaces
 
 Find-Command Invoke-Parallel
 
