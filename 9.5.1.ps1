@@ -1,4 +1,4 @@
-﻿# 9.5.1 Demo: DSC and JEA
+# 9.5.1 Demo: DSC and JEA
 
 Install-Module JeaDsc
 
