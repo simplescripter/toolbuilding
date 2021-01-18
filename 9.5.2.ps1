@@ -1,6 +1,9 @@
-﻿# 9.5.2 Demo: DSC and JEA Continued
+# 9.5.2 Demo: DSC and JEA Continued
 
-# Adapted from General Server Maintenance Demo Config.ps1 sample # at https://github.com/dsccommunity/JeaDsc/tree/master/SamplesConfiguration GeneralServerMaintenance
+# Adapted from General Server Maintenance Demo Config.ps1 sample 
+# at https://github.com/dsccommunity/JeaDsc/tree/master/Samples
+
+Configuration GeneralServerMaintenance
 {
     Param(
         [string[]]$computerName
