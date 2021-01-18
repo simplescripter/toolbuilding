@@ -1,4 +1,4 @@
-﻿# 9.4 Registering and Using JEA
+# 9.4 Registering and Using JEA
 
 $managedEndpoint = 'LonSVR1'
 $configName = 'adatum.generalserver.level1'
